@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Saihari Furniture category catalogue">
+  <title>Furniture Catalogue | साईहरी फर्निचर</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="catalogue-page">
+
+<header class="main-header">
+  <div class="navbar">
+    <a href="index.html" class="brand">
+      <div class="brand-logo">SF</div>
+      <div class="brand-text"><div class="brand-marathi">साईहरी</div><div class="brand-subtitle">FURNITURE</div></div>
+    </a>
+    <button class="mobile-menu-button" id="mobileMenuButton"><i class="fa-solid fa-bars"></i></button>
+    <nav class="navigation" id="navigation">
+      <a class="nav-link" href="index.html">Home</a>
+      <button class="nav-link nav-category-button" data-category="home">Home Furniture</button>
+      <button class="nav-link nav-category-button" data-category="hotel">Hotel Furniture</button>
+      <button class="nav-link nav-category-button" data-category="office">Office Furniture</button>
+      <button class="nav-link nav-category-button" data-category="educational">Educational</button>
+      <button class="nav-link nav-category-button" data-category="outdoor">Outdoor</button>
+      <button class="nav-link nav-category-button" data-category="metal">Metal Furniture</button>
+      <a class="nav-link" href="index.html#contact">Contact</a>
+    </nav>
+    <a href="https://wa.me/918999384239" target="_blank" class="header-whatsapp"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+  </div>
+</header>
+
+<section class="catalogue-hero">
+  <div class="catalogue-hero-inner">
+    <a href="index.html#categories" class="back-link"><i class="fa-solid fa-arrow-left"></i> All Categories</a>
+    <span class="hero-small">SAIHARI FURNITURE CATALOGUE</span>
+    <h1 id="categoryTitle">Furniture</h1>
+    <p id="categoryDescription">Explore our collection and click any product to enquire.</p>
+  </div>
+</section>
+
+<main class="catalogue-main">
+  <div class="catalogue-toolbar">
+    <div><strong id="itemCount">0</strong> products available</div>
+    <select id="sortProducts" aria-label="Sort products">
+      <option value="default">Featured</option>
+      <option value="az">Name A-Z</option>
+      <option value="za">Name Z-A</option>
+    </select>
+  </div>
+  <div class="product-grid-page" id="productGrid"></div>
+  <div class="empty-state" id="emptyState" hidden>
+    <i class="fa-solid fa-chair"></i><h2>No products added yet</h2>
+    <p>Add your product photos in the <strong>images</strong> folder and update the product list in script.js.</p>
+  </div>
+</main>
+
+<div class="modal" id="enquiryModal" aria-hidden="true">
+  <div class="modal-backdrop" data-close-modal></div>
+  <div class="enquiry-modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button class="modal-close" id="closeModal" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+    <div class="modal-product">
+      <img id="modalImage" src="" alt="">
+      <div>
+        <span class="modal-category" id="modalCategory"></span>
+        <h2 id="modalTitle">Product Enquiry</h2>
+        <p id="modalProductName"></p>
+      </div>
+    </div>
+    <form id="productEnquiryForm">
+      <input type="hidden" id="selectedProduct">
+      <div class="form-row">
+        <input id="enquiryName" required placeholder="Your Name">
+        <input id="enquiryPhone" required type="tel" placeholder="Mobile Number">
+      </div>
+      <input id="enquiryQuantity" placeholder="Quantity (optional)">
+      <textarea id="enquiryMessage" rows="4" placeholder="Message / size / colour / other requirements"></textarea>
+      <button class="primary-button full-button" type="submit"><i class="fa-brands fa-whatsapp"></i> Send Enquiry on WhatsApp</button>
+    </form>
+    <p class="secure-note"><i class="fa-solid fa-lock"></i> Your enquiry opens directly in WhatsApp. No payment is taken on this website.</p>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-bottom">© 2026 साईहरी फर्निचर • <a href="index.html">Home</a> • <a href="tel:+918999384239">8999384239</a></div>
+</footer>
+
+<a class="floating-whatsapp" href="https://wa.me/918999384239" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i><span>WhatsApp</span></a>
+<script src="script.js"></script>
+</body>
+</html>
